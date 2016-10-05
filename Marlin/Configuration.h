@@ -1561,6 +1561,7 @@
 // http://www.inventapart.com/
 //
 //#define RIGIDBOT_PANEL
+#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
 
 //
 // Makeboard 3D Printer Parts 3D Printer Mini Display 1602 Mini Controller
