@@ -734,6 +734,7 @@
   //#define BLTOUCH_DELAY 375   // (ms) Enable and increase if needed
 #endif
 
+<<<<<<< HEAD
 /**
  * Enable one or more of the following if probing seems unreliable.
  * Heaters and/or fans can be disabled during probing to minimize electrical
@@ -750,9 +751,15 @@
 
 // A probe that is deployed and stowed with a solenoid pin (SOL1_PIN)
 //#define SOLENOID_PROBE
+=======
+// Z Servo Probe, such as an endstop switch on a rotating arm.
+#define Z_ENDSTOP_SERVO_NR 0
+#define Z_SERVO_ANGLES {0,70} // Z Servo Deploy and Stow angles
+>>>>>>> First z probe tryout
 
 // A sled-mounted probe like those designed by Charles Bell.
 //#define Z_PROBE_SLED
+<<<<<<< HEAD
 //#define SLED_DOCKING_OFFSET 5  // The extra distance the X axis must travel to pickup the sled. 0 should be fine but you can push it further if you'd like.
 
 //
@@ -781,6 +788,30 @@
 #define X_PROBE_OFFSET_FROM_EXTRUDER 10  // X offset: -left  +right  [of the nozzle]
 #define Y_PROBE_OFFSET_FROM_EXTRUDER 10  // Y offset: -front +behind [the nozzle]
 #define Z_PROBE_OFFSET_FROM_EXTRUDER 0   // Z offset: -below +above  [the nozzle]
+=======
+//#define SLED_DOCKING_OFFSET 5 // The extra distance the X axis must travel to pickup the sled. 0 should be fine but you can push it further if you'd like.
+
+// Z Probe to nozzle (X,Y) offset, relative to (0, 0).
+// X and Y offsets must be integers.
+//
+// In the following example the X and Y offsets are both positive:
+// #define X_PROBE_OFFSET_FROM_EXTRUDER 10
+// #define Y_PROBE_OFFSET_FROM_EXTRUDER 10
+//
+//    +-- BACK ---+
+//    |           |
+//  L |    (+) P  | R <-- probe (20,20)
+//  E |           | I
+//  F | (-) N (+) | G <-- nozzle (10,10)
+//  T |           | H
+//    |    (-)    | T
+//    |           |
+//    O-- FRONT --+
+//  (0,0)
+#define X_PROBE_OFFSET_FROM_EXTRUDER 20  // X offset: -left  +right  [of the nozzle]
+#define Y_PROBE_OFFSET_FROM_EXTRUDER -10  // Y offset: -front +behind [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER -5   // Z offset: -below +above  [the nozzle]
+>>>>>>> First z probe tryout
 
 // Certain types of probes need to stay away from edges
 #define MIN_PROBE_EDGE 10
@@ -1034,7 +1065,11 @@
   // Probe along the Y axis, advancing X after each column
   //#define PROBE_Y_FIRST
 
+<<<<<<< HEAD
   #if ENABLED(AUTO_BED_LEVELING_BILINEAR)
+=======
+#define AUTO_BED_LEVELING_FEATURE // Delete the comment to enable (remove // at the start of the line)
+>>>>>>> First z probe tryout
 
     // Beyond the probed grid, continue the implied tilt?
     // Default is to maintain the height of the nearest edge.
@@ -1866,6 +1901,7 @@
 // Support for PCA9632 PWM LED driver
 //#define PCA9632
 
+<<<<<<< HEAD
 /**
  * RGB LED / LED Strip Control
  *
@@ -1897,6 +1933,21 @@
   #define RGB_LED_B_PIN 35
   #define RGB_LED_W_PIN -1
 #endif
+=======
+// Number of servos
+//
+// If you select a configuration below, this will receive a default value and does not need to be set manually
+// set it manually if you have more servos than extruders and wish to manually control some
+// leaving it undefined or defining as 0 will disable the servo subsystem
+// If unsure, leave commented / disabled
+//
+#define NUM_SERVOS 1 // Servo index starts with 0 for M280 command
+
+// Delay (in microseconds) before the next move will start, to give the servo time to reach its target angle.
+// 300ms is a good value but you can try less delay.
+// If the servo can't reach the requested position, increase it.
+#define SERVO_DELAY 300
+>>>>>>> First z probe tryout
 
 // Support for Adafruit Neopixel LED driver
 //#define NEOPIXEL_LED
