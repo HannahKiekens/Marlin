@@ -1065,12 +1065,7 @@
   // Probe along the Y axis, advancing X after each column
   //#define PROBE_Y_FIRST
 
-<<<<<<< HEAD
   #if ENABLED(AUTO_BED_LEVELING_BILINEAR)
-=======
-#define AUTO_BED_LEVELING_FEATURE // Delete the comment to enable (remove // at the start of the line)
->>>>>>> First z probe tryout
-
     // Beyond the probed grid, continue the implied tilt?
     // Default is to maintain the height of the nearest edge.
     //#define EXTRAPOLATE_BEYOND_GRID
